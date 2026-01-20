@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react'
+import StarsBackground from '../components/StarsBackground'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -44,21 +45,10 @@ export default function Contact() {
 
   return (
     <div className="relative min-h-screen bg-[#1a1718]">
-      {/* ANIMATED BACKGROUND */}
-      <div className="fixed inset-0 z-0">
-        {/* Moving gradient orbs */}
-        <div className="absolute w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-3xl -top-20 -left-20 animate-float1"></div>
-        <div className="absolute w-[400px] h-[400px] bg-orange-600/8 rounded-full blur-3xl bottom-10 right-10 animate-float2"></div>
-
-        {/* Subtle floating particles */}
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1.5 h-1.5 bg-orange-400/40 rounded-full"
-          />
-        ))}
+      {/* Fond dynamique étoiles */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <StarsBackground />
       </div>
-
       {/* Content wrapper */}
       <div className="relative z-10">
       {/* Hero Section */}

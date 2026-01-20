@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import StarsBackground from '../components/StarsBackground'
 import { Link } from 'react-router-dom'
 import enetreveal from '../img/enetreveal.jpg'
 import ambassadors from '../img/ambassadors.jfif'
@@ -74,7 +75,13 @@ Do you have what it takes to become the Sky Tycoon?`,
   }
 
   return (
-    <div>
+    <div className="relative min-h-screen">
+      {/* Fond dynamique étoiles */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <StarsBackground />
+      </div>
+      {/* Le contenu principal doit être au-dessus */}
+      <div className="relative z-10">
       {/* Hero Section */}
       <section className="pt-36 pb-20 bg-gradient-to-b from-orange-600/10 to-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,6 +216,7 @@ Do you have what it takes to become the Sky Tycoon?`,
           </div>
         </div>
       </section>
+      </div>
     </div>
   )
 }

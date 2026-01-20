@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import StarsBackground from '../components/StarsBackground'
 
 // Correction : utiliser import.meta.glob avec { eager: true }
 const _assets: Record<string, any> = import.meta.glob('../img/*.{jpg,jpeg,png,jfif,svg,webp,mp4}', { eager: true })
@@ -82,40 +83,10 @@ export default function About() {
 
   return (
     <div className="relative min-h-screen bg-[#1a1718]">
-      {/* SIMPLE ANIMATED BACKGROUND */}
-      <div className="fixed inset-0 z-0">
-        
-        {/* 2 Moving gradient orbs - subtle and elegant */}
-        <div className="absolute w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-3xl -top-20 -left-20 animate-float1"></div>
-        <div className="absolute w-[400px] h-[400px] bg-orange-600/8 rounded-full blur-3xl bottom-10 right-10 animate-float2"></div>
-
-        {/* Subtle floating particles */}
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1.5 h-1.5 bg-orange-400/40 rounded-full"
-          ></div>
-        ))}
+      {/* Fond dynamique étoiles */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <StarsBackground />
       </div>
-
-      {/* SIMPLE ANIMATIONS */}
-      <style>{`
-        @keyframes float1 {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(100px, 60px); }
-        }
-        @keyframes float2 {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(-80px, -50px); }
-        }
-        @keyframes floatUp {
-          0% { transform: translateY(0); opacity: 0; }
-          10% { opacity: 0.6; }
-          90% { opacity: 0.6; }
-          100% { transform: translateY(-100vh); opacity: 0; }
-        }
-      `}</style>
-
       {/* Content with higher z-index */}
       <div className="relative z-10">
       {/* Hero Section with Memories Carousel */}
