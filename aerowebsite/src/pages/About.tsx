@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-// Import all images/videos from src/img so Vite bundles them during build
-const _assets: Record<string, any> = (import.meta as any).globEager('../img/*.{jpg,jpeg,png,jfif,svg,webp,mp4,HEIC}')
+// Correction : utiliser import.meta.glob avec { eager: true }
+const _assets: Record<string, any> = import.meta.glob('../img/*.{jpg,jpeg,png,jfif,svg,webp,mp4}', { eager: true })
 const assets: Record<string, string> = Object.fromEntries(
   Object.entries(_assets).map(([k, m]) => [k.replace('../img/', ''), (m && (m.default || m))])
 )
@@ -253,7 +253,9 @@ export default function About() {
                         controls
                         className="w-full h-full object-contain bg-black"
                       >
-                        <source src={videos[0]} type="video/mp4" />
+                        {videos[0] && (
+                          <source src={videos[0]} type="video/mp4" />
+                        )}
                       </video>
                       
                       {/* Video Overlay */}
@@ -383,7 +385,7 @@ export default function About() {
               >
                 <div className="relative w-16 h-16 mx-auto mb-4">
                   <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center text-3xl group-hover:bg-orange-500/30 transition-colors overflow-hidden">
-                    {member.image.includes('/') ? (
+                    {typeof member.image === 'string' ? (
                       <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                     ) : (
                       member.image

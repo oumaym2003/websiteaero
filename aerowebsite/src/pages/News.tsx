@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import enetreveal from '../img/enetreveal.jpg'
 import ambassadors from '../img/ambassadors.jfif'
+import cahierdechargeplanneur from '../img/cahierdechargeplanneur.png'
+import planneurregest from '../img/planneurregest.jpg' // <-- Ajout de l'import
 
 interface NewsItem {
   id: number
@@ -34,7 +37,31 @@ export default function News() {
       image: ambassadors,
       link: 'https://docs.google.com/forms/d/e/1FAIpQLSfxKNWrZ-REV7dnan3nPFR8jCtdHPAJ42x1-_dR7-RSO8p2pg/viewform?fbclid=IwY2xjawPUz19leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR5w9z3VIznouSkkoH8wEqv0So1PS6OpOLZ7Hgt8UFrlI-VT5D-wVSSWlIxeWQ_aem_JbGth97oDNKGporb09LdYQ&pli=1'
     },
+    {
+      id: 3,
+      title: 'Cahier de charge planneur',
+      date: 'January 20, 2026',
+      category: 'technicalspecifications',
+      excerpt: `Take control of the skies in Monopoly City at ENET AERO CUP 5.0.
+Every flight is a calculated move.
+Strategy, precision, and control will determine who dominates the board.
+Plan smart. Fly smarter.
+Do you have what it takes to become the Sky Tycoon?`,
+      image: cahierdechargeplanneur,
+      link: 'https://drive.google.com/file/d/1_Iwlr3lxJkRSm67crJqnEU6o3nKO41sB/view?usp=sharing&fbclid=IwY2xjawPcc3xleHRuA2FlbQIxMABicmlkETFPamNUZnppZVR0Q1NQNkdrc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnRCVjl9gy-Jdk58g-sJBqv6vrryDZTfxLKwHcQRYPFEmRb3Ia3fJzSRZJRw_aem_l15myoVWxoLqHz74U1y1VQ'
+    },
+    {
+      id: 4,
+      title: 'ENET Aero Cup Glider Competition Form v5.0',
+      date: 'January 21, 2026',
+      category: 'registration',
+      excerpt: 'Register your team for the ENET Aero Cup Glider Competition v5.0 and take your chance to become the next Sky Tycoon!',
+      image: planneurregest,
+      link: 'https://docs.google.com/forms/d/e/1FAIpQLSfq_ikHRck8OwnQnXiUaWe77KeUcCKJS08E7jFG8b1mmgN_pQ/viewform'
+    },
   ]
+
+  // ...le reste du code inchangé...
 
   const filteredNews = filter === 'all' 
     ? newsItems 
@@ -173,12 +200,12 @@ export default function News() {
                 ENET AERO CUP 5.0 main event: <span className="text-orange-400 font-semibold">February 15, 2026</span>
               </p>
             </div>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="btn-gradient text-dark px-8 py-4 rounded-xl font-bold shadow-lg transition-transform whitespace-nowrap"
             >
               Register Now
-            </a>
+            </Link>
           </div>
         </div>
       </section>
