@@ -68,10 +68,10 @@ export default function About() {
     { name: 'Ahmed Abida', role: 'Events Manager', image: assets['bida.jpg'], email: 'events@enetaerocup.tn' },
     { name: 'Haitham Cherif & Roua Kammoun', role: 'Media Lead', image: assets['haithem.jpg'], email: 'media@enetaerocup.tn' },
     { name: 'Oussema Bensalah', role: 'Sponsorship Lead', image: assets['oussema.jpg'], email: 'sponsorship@enetaerocup.tn' },
-    { name: 'Project Manager', role: 'Project Manager', image: assets['bourmech.jpg'], email: 'project@enetaerocup.tn' },
-    { name: 'Technical Manager', role: 'Technical Manager', image: assets['karim.jpg'], email: 'technical@enetaerocup.tn' },
-    { name: 'Tresorier', role: 'Tresorier', image: assets['kaabi.jpg'], email: 'finance@enetaerocup.tn' },
-    { name: 'Human Ressources Manager', role: 'Human Ressources Manager', image: assets['nesrine.jpg'], email: 'hr@enetaerocup.tn' },
+    { name: 'Mohammed Bourmech', role: 'Project Manager', image: assets['bourmech.jpg'], email: 'project@enetaerocup.tn' },
+    { name: 'Karim Rebai', role: 'Technical Manager', image: assets['karim.jpg'], email: 'technical@enetaerocup.tn' },
+    { name: 'Ahmed Kaabi', role: 'Tresorier', image: assets['kaabi.jpg'], email: 'finance@enetaerocup.tn' },
+    { name: 'Nesrine Saida', role: 'Human Resources Manager', image: assets['nesrine.jpg'], email: 'hr@enetaerocup.tn' },
   ]
 
   const achievements = [
@@ -126,6 +126,7 @@ export default function About() {
                     }`}
                   >
                     <img
+                      loading="lazy"
                       src={memory.src}
                       alt={memory.caption}
                       className="w-full h-full object-contain bg-black/40"
@@ -176,6 +177,7 @@ export default function About() {
                     }`}
                   >
                     <img
+                      loading="lazy"
                       src={memory.src}
                       alt={`Thumbnail ${index + 1}`}
                       className="w-full h-full object-cover"
@@ -217,10 +219,11 @@ export default function About() {
                     <div className="relative aspect-[9/16]">
                       <video
                         key={0}
+                        preload="auto"
                         autoPlay
                         muted
-                        loop
                         playsInline
+                        loop
                         controls
                         className="w-full h-full object-contain bg-black"
                       >
@@ -320,6 +323,7 @@ export default function About() {
                 <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center overflow-hidden">
                   {achievement.image ? (
                     <img 
+                      loading="lazy"
                       src={achievement.image} 
                       alt={achievement.year} 
                       className="w-full h-full object-cover"
@@ -357,7 +361,7 @@ export default function About() {
                 <div className="relative w-16 h-16 mx-auto mb-4">
                   <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center text-3xl group-hover:bg-orange-500/30 transition-colors overflow-hidden">
                     {typeof member.image === 'string' ? (
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                      <img loading="lazy" src={member.image} alt={member.name} className="w-full h-full object-cover" />
                     ) : (
                       member.image
                     )}

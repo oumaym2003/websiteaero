@@ -232,7 +232,7 @@ export default function Home() {
             {/* Feature 1 */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-colors group">
               <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/30 transition-colors">
-                <img src={logodrone} alt="Drone" className="w-10 h-10 object-contain" />
+                <img loading="lazy" src={logodrone} alt="Drone" className="w-10 h-10 object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-3">Drone Racing</h3>
               <p className="text-white/60 leading-relaxed">
@@ -243,7 +243,7 @@ export default function Home() {
             {/* Feature 2 */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-colors group">
               <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/30 transition-colors">
-                <img src={gliderIcon} alt="Glider" className="w-10 h-10 object-contain" />
+                <img loading="lazy" src={gliderIcon} alt="Glider" className="w-10 h-10 object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-3">Glider Competition</h3>
               <p className="text-white/60 leading-relaxed">
@@ -254,7 +254,7 @@ export default function Home() {
             {/* Feature 3 */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-colors group">
               <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/30 transition-colors">
-                <img src={rcIcon} alt="RC Plane" className="w-10 h-10 object-contain" />
+                <img loading="lazy" src={rcIcon} alt="RC Plane" className="w-10 h-10 object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-3">RC Planes</h3>
               <p className="text-white/60 leading-relaxed">
