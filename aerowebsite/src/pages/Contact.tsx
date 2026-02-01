@@ -52,8 +52,12 @@ export default function Contact() {
       {/* Content wrapper */}
       <div className="relative z-10">
       {/* Hero Section */}
-      <section className="pt-36 pb-20 bg-gradient-to-b from-orange-600/10 to-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-36 pb-20 bg-gradient-to-b from-orange-600/10 to-transparent">
+        {/* Dark overlay to match Home/About */}
+        <div className="absolute inset-0 bg-[#1a1718]" />
+        {/* Stars (on top of dark overlay) */}
+        <StarsBackground />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-6">
               Contact <span className="text-orange-400">Us</span>

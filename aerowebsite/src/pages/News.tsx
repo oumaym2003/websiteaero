@@ -5,6 +5,11 @@ import enetreveal from '../img/enetreveal.jpg'
 import ambassadors from '../img/ambassadors.jfif'
 import cahierdechargeplanneur from '../img/cahierdechargeplanneur.png'
 import planneurregest from '../img/planneurregest.jpg' // <-- Ajout de l'import
+import cahierdechargepoly from '../img/cahierdechargepoly.jpg' // <-- Polyclub image
+import rcc from '../img/rcc.png' // <-- PolyClub rulebook image
+import dronereg from '../img/dronereg.jpg' // <-- Drone registration image
+import dronecr from '../img/dronecr.png' // <-- Drone rulebook image
+import coupe from '../img/coupe01.png' // <-- ENET Cup announcement image
 
 interface NewsItem {
   id: number
@@ -22,7 +27,7 @@ export default function News() {
   const newsItems: NewsItem[] = [
     {
       id: 1,
-      title: 'THEME REVEAL 🎲✈️',
+      title: 'Theme Reveal',
       date: 'January 14, 2026',
       category: 'announcement',
       excerpt: 'A world of strategy, smart decisions, risk, and rewards. Just like Monopoly, every move counts, every choice matters, and one decision can change the entire game.',
@@ -31,7 +36,7 @@ export default function News() {
     },
     {
       id: 2,
-      title: 'Call For Ambassadors',
+      title: 'Call for Ambassadors',
       date: 'January 14, 2026',
       category: 'registration',
       excerpt: 'Do you want to be part of an extraordinary adventure and contribute to the success of ENET AERO CUP 5.0? 🚀✈️ Join our team of ambassadors and help us make this unique event shine!',
@@ -40,7 +45,7 @@ export default function News() {
     },
     {
       id: 3,
-      title: 'Cahier de charge planneur',
+      title: 'Glider Specifications',
       date: 'January 20, 2026',
       category: 'technicalspecifications',
       excerpt: `Take control of the skies in Monopoly City at ENET AERO CUP 5.0.
@@ -53,13 +58,74 @@ Do you have what it takes to become the Sky Tycoon?`,
     },
     {
       id: 4,
-      title: 'ENET Aero Cup Glider Competition Form v5.0',
+      title: 'Glider Competition Registration Form v5.0',
       date: 'January 21, 2026',
       category: 'registration',
       excerpt: 'Register your team for the ENET Aero Cup Glider Competition v5.0 and take your chance to become the next Sky Tycoon!',
       image: planneurregest,
       link: 'https://docs.google.com/forms/d/e/1FAIpQLSfq_ikHRck8OwnQnXiUaWe77KeUcCKJS08E7jFG8b1mmgN_pQ/viewform'
     },
+    {
+      id: 5,
+      title: 'Polyclub Precision Challenge',
+      date: 'February 1, 2026',
+      category: 'registration',
+      excerpt: `The Polyclub competition at ENET AERO CUP 5.0 focuses on precision, stability, and control rather than speed.
+
+Pilots must manage constraints, execute accurate trajectories, and make strategic decisions to maximize their performance.`,
+      image: cahierdechargepoly,
+      link: 'https://forms.gle/kSWrEwtZysYMXULx8'
+    },
+    {
+      id: 6,
+      title: 'Competition Rulebook',
+      date: 'February 1, 2026',
+      category: 'technicalspecifications',
+      excerpt: `Rule the airspace at PolyClub Aero Challenge.
+Every glide is a decision. Every turn can change the game.
+Master strategy, precision, and control to outfly your rivals.
+Think ahead. Plan every move.
+Only the sharpest minds will claim victory in the skies.
+Are you ready to become the ultimate Air Strategist?`,
+      image: rcc,
+      link: 'https://drive.google.com/file/d/1A3Nvg7v126YoxPvOIkvEC7fd2YAXSq7T/view?fbclid=IwY2xjawPsqI1leHRuA2FlbQIxMABicmlkETFUUkhrQ3pSQWhGNzhlUG9Tc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuN244yXKwADe0ipf8hq7WEDT20iosPTfSdbXpNbhv9hXQ_NmkWhpkf2d1Rg_aem_wkWQN9kX65_W05qPKiRK3Q'
+    },
+    {
+      id: 7,
+      title: 'Drone Registration',
+      date: 'February 1, 2026',
+      category: 'registration',
+      excerpt: `La compétition Drone à ENET AERO CUP 5.0 est conçue comme un défi de pilotage de précision et de maîtrise totale. Les participants devront franchir des obstacles techniques, respecter des trajectoires contrôlées et adapter leur stratégie à chaque situation, où la stabilité et le sang-froid priment sur la vitesse.`,
+      image: dronereg,
+      link: 'https://forms.gle/hfMvcYPfYNjM47Lg8'
+    },
+    {
+      id: 8,
+      title: 'Drone Rulebook',
+      date: 'February 1, 2026',
+      category: 'technicalspecifications',
+      excerpt: `Take control of the airspace at PolyClub Drone Challenge.
+Every flight path is a decision. Every second counts.
+Strategy, precision, and control will separate the pilots from the champions.
+Plan smart. Fly precise. Adapt fast.
+Do you have what it takes to dominate the skies?`,
+      image: dronecr,
+      link: dronecr
+    },
+
+    {
+      id: 9,
+      title: 'ENET AERO CUP 5.0 — Cup Announcement',
+      date: 'February 1, 2026',
+      category: 'announcement',
+      excerpt: `🚀 ENET AERO CUP 5.0 is on its way! ✈️🏆
+
+The cup competition rulebook has been released. Discover the guidelines, master the challenges, and fine-tune your approach for a high-level aeromodelling showdown driven by strategy and precision.
+
+📅 February 15, 2026 marks the day when skill and innovation collide, and the most prepared teams rise above the rest.`,
+      image: coupe,
+      link: 'https://drive.google.com/file/d/1nRQh-hdltR7-7QvuXHLIvdjBbts0r5TJ/view?fbclid=IwY2xjawPsqY1leHRuA2FlbQIxMABicmlkETFUUkhrQ3pSQWhGNzhlUG9Tc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvDbIr2_OttxQ7-cRwiaOhF20qqXCDXC1SyuOMMNtyNNJ3_YI4WAmvlnZ1cj_aem_eF6eFLsIMaouj1yaboU5xA'
+    }
   ]
 
   // ...le reste du code inchangé...
@@ -83,8 +149,12 @@ Do you have what it takes to become the Sky Tycoon?`,
       {/* Le contenu principal doit être au-dessus */}
       <div className="relative z-10">
       {/* Hero Section */}
-      <section className="pt-36 pb-20 bg-gradient-to-b from-orange-600/10 to-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-36 pb-20 bg-gradient-to-b from-orange-600/10 to-dark">
+        {/* Dark overlay to match Home/About */}
+        <div className="absolute inset-0 bg-[#1a1718]" />
+        {/* Stars (on top of dark overlay) */}
+        <StarsBackground />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-6">
               Latest <span className="text-orange-400">News</span>
@@ -153,7 +223,7 @@ Do you have what it takes to become the Sky Tycoon?`,
                 {/* Image placeholder */}
                 <div className="h-48 bg-gradient-to-br from-orange-500/20 to-orange-600/10 flex items-center justify-center overflow-hidden">
                   {typeof item.image === 'string' && item.image.includes('/') ? (
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                    <img loading="lazy" src={item.image} alt={item.title} className="w-full h-full object-cover" />
                   ) : (
                     <span className="text-6xl">{item.image}</span>
                   )}
