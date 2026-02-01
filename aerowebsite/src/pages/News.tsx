@@ -8,6 +8,7 @@ import planneurregest from '../img/planneurregest.jpg' // <-- Ajout de l'import
 import cahierdechargepoly from '../img/cahierdechargepoly.jpg' // <-- Polyclub image
 import rcc from '../img/rcc.png' // <-- PolyClub rulebook image
 import dronereg from '../img/dronereg.jpg' // <-- Drone registration image
+import dronecr from '../img/dronecr.png' // <-- Drone rulebook image
 import coupe from '../img/coupe01.png' // <-- ENET Cup announcement image
 
 interface NewsItem {
@@ -108,9 +109,10 @@ Every flight path is a decision. Every second counts.
 Strategy, precision, and control will separate the pilots from the champions.
 Plan smart. Fly precise. Adapt fast.
 Do you have what it takes to dominate the skies?`,
-      image: '/src/img/dronecr.png',
-      link: 'https://drive.google.com/file/d/1uZYBDcqrmFykof9bWpzgi5vRQmgFv_HG/view?fbclid=IwY2xjawPsp0lleHRuA2FlbQIxMABicmlkETFUUkhrQ3pSQWhGNzhlUG9Tc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHlRpi-kBTgiNgCUbuBgoArhVF8mwhzjLhnTS4aPvH4abo_77LkGpZ5nPgKzQ_aem_v46Orv06xKha6SWgU-PQBg'
+      image: dronecr,
+      link: dronecr
     },
+
     {
       id: 9,
       title: 'ENET AERO CUP 5.0 — Cup Announcement',
