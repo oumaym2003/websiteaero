@@ -300,7 +300,8 @@ export default function Home() {
             Register now and be part of ENET AERO CUP 5.0!
           </p>
           <Link
-            to="/contact"
+            to="/news"
+            state={{ filter: 'registration' }}
             className="btn-gradient inline-block text-dark px-10 py-4 rounded-xl font-bold text-lg shadow-2xl shadow-orange-500/25 transition-all hover:shadow-orange-500/40"
           >
             Register Your Team

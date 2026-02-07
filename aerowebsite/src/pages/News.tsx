@@ -67,7 +67,7 @@ Do you have what it takes to become the Sky Tycoon?`,
     },
     {
       id: 5,
-      title: 'Polyclub Precision Challenge',
+      title: 'Polyclub Competition Registration Form v5.0',
       date: 'February 1, 2026',
       category: 'registration',
       excerpt: `The Polyclub competition at ENET AERO CUP 5.0 focuses on precision, stability, and control rather than speed.
@@ -92,7 +92,7 @@ Are you ready to become the ultimate Air Strategist?`,
     },
     {
       id: 7,
-      title: 'Drone Registration',
+      title: 'Drone Competition Registration Form v5.0',
       date: 'February 1, 2026',
       category: 'registration',
       excerpt: `La compétition Drone à ENET AERO CUP 5.0 est conçue comme un défi de pilotage de précision et de maîtrise totale. Les participants devront franchir des obstacles techniques, respecter des trajectoires contrôlées et adapter leur stratégie à chaque situation, où la stabilité et le sang-froid priment sur la vitesse.`,
@@ -110,12 +110,12 @@ Strategy, precision, and control will separate the pilots from the champions.
 Plan smart. Fly precise. Adapt fast.
 Do you have what it takes to dominate the skies?`,
       image: dronecr,
-      link: dronecr
+      link: 'https://drive.google.com/file/d/1uZYBDcqrmFykof9bWpzgi5vRQmgFv_HG/view?fbclid=IwY2xjawP0QFZleHRuA2FlbQIxMABicmlkETFmdmw3SW1yZTJoUGFsTHJMc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHioVFemwlUFtWDq90Mt5_V87ID4OiDeflB3j9nCZTiZFPMyNUiKDrQ4wJ34R_aem_Phc847e1LZd2wi5I-XmlWg'
     },
 
     {
       id: 9,
-      title: 'ENET AERO CUP 5.0 — Cup Announcement',
+      title: 'Cup Announcement',
       date: 'February 1, 2026',
       category: 'announcement',
       excerpt: `🚀 ENET AERO CUP 5.0 is on its way! ✈️🏆
@@ -237,18 +237,25 @@ The cup competition rulebook has been released. Discover the guidelines, master 
                     </span>
                     <span className="text-white/40 text-sm">{item.date}</span>
                   </div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:text-orange-400 transition-colors">
+                  <a 
+                    href={item.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-lg font-bold mb-3 block group-hover:text-orange-400 transition-colors"
+                  >
                     {item.title}
-                  </h3>
+                  </a>
                   <p className="text-white/60 text-sm leading-relaxed">
                     {item.excerpt}
                   </p>
-                  <button 
-                    onClick={() => item.link && window.open(item.link, '_blank')}
-                    className="mt-4 text-orange-400 text-sm font-medium hover:text-orange-300 transition-colors"
+                  <a 
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-orange-400 text-sm font-medium hover:text-orange-300 transition-colors"
                   >
                     Read more →
-                  </button>
+                  </a>
                 </div>
               </article>
             ))}
